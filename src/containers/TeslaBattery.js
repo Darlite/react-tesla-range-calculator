@@ -7,6 +7,7 @@ import TeslaCar from '../components/TeslaCar/TeslaCar';
 import TeslaStats from '../components/TeslaStats/TeslaStats';
 import TeslaCounter from '../components/TeslaCounter/TeslaCounter';
 import TeslaClimate from '../components/TeslaClimate/TeslaClimate';
+import TeslaWheels from '../components/TeslaWheels/TeslaWheels';
 import TeslaNotice from '../components/TeslaNotice/TeslaNotice';
 
 class TeslaBattery extends Component {
@@ -28,6 +29,7 @@ class TeslaBattery extends Component {
     this.decrement = this.decrement.bind(this);
     this.updateCounterState = this.updateCounterState.bind(this);
     this.handleChangeClimate = this.handleChangeClimate.bind(this);
+    this.handleChangeWheels = this.handleChangeWheels.bind(this);
   }
 
   calculateStats = (models, value) => {
@@ -104,6 +106,12 @@ class TeslaBattery extends Component {
     this.setState({ config });
   };
 
+  handleChangeWheels(size) {
+    const config = {...this.state.config};
+    config['wheels'] = size;
+    this.setState({ config });
+  }
+
   componentDidMount() {
     this.statsUpdate();
   };
@@ -135,6 +143,10 @@ class TeslaBattery extends Component {
               handleChangeClimate={this.handleChangeClimate}
             />
           </div>
+          <TeslaWheels
+            value={this.state.config.wheels}
+            handleChangeWheels={this.handleChangeWheels}
+          />
         </div>
         <TeslaNotice />
       </form>
