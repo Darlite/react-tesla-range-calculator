@@ -38,3 +38,9 @@
     padding: 0 15px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .tesla-battery {
+    width: 500px;
+  }
+}

@@ -63,3 +63,9 @@
 .tesla-stats-icon--p100d {
   background-image: url(../../assets/models/p100d.svg);
 }
+
+@media screen and (max-width: 500px) {
+  .tesla-stats {
+    margin: -150px 0 30px;
+  }
+}
