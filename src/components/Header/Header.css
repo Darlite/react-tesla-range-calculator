@@ -2,9 +2,16 @@
   padding: 25px 0;
   text-align: center;
   background: #222222;
+  min-width: 1050px;
 }
 
 .header img {
   width: 100px;
   height: 13px;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    min-width: 500px;
+  }
 }

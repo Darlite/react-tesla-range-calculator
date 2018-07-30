@@ -60,3 +60,9 @@
   position: absolute;
   width: 1px;
 }
+
+@media screen and (max-width: 500px) {
+  .tesla-wheels__component {
+    margin-top: 15px;
+  }
+}
